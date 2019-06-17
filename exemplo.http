@@ -1,0 +1,12 @@
+
+ http://localhost:3000/filmes
+
+###
+GET http://localhost:3000/filmes/2 HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "Avatar 2",
+    "categoria": "Ação",
+    "dataLancamento": "2015"
+}

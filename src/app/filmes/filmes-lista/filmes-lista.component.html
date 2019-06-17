@@ -1,0 +1,54 @@
+<div class="card mt-3">
+    <div class="card-header">
+        <div class="float-left">
+            <h4>Filmes</h4>
+        </div>
+        <div class="float-right">
+            <button type="button" class="btn btn-primary" [routerLink]="['novo']">Novo Filme</button> {{''}}
+            <button type="button" class="btn btn-dark" (click)="onRefresh()">Atualizar</button>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover" *ngIf="filmes$ | async as filmes; else loading">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Filme</th>
+                    <th>Categoria</th>
+                    <th>Lançamento</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let filme of filmes">
+                    <td>{{ filme.id }}</td>
+                    <td>{{ filme.titulo }}</td>
+                    <td>{{ filme.categoria }}</td>
+                    <td>{{ filme.anoLancamento }}</td>
+                    <td>
+                        <span class="float-right">
+              <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onEdit(filme.id)">
+                Atualizar
+              </button>
+              {{''}}
+              <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onDelete(filme)">
+                Remover
+              </button>
+            </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ng-template #loading>
+            <span>Carregando filmes...</span>
+        </ng-template>
+    </div>
+</div>
+
+<ng-template #deleteModal>
+    <div class="modal-body text-center">
+        <p>Deseja, realmente, deletar esse filme?</p>
+        <button type="button" class="btn btn-default" (click)="onConfirm()">Sim</button>
+        <button type="button" class="btn btn-primary" (click)="onCancel()">Não</button>
+    </div>
+</ng-template>

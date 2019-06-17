@@ -1,0 +1,58 @@
+<h4>Editar filme</h4>
+<form class="needs-validation padding" novalidate [formGroup]="form">
+    <div class="form-row">
+        <div class="col-sm-12">
+            <label for="titulo">Titulo</label>
+            <input type="text" class="form-control" id="titulo" placeholder="Titulo do filme" formControlName="titulo" [ngClass]="{ 'is-invalid': submitted && hasErrors('titulo') }" />
+            <div class="invalid-feedback" *ngIf="hasErrors('titulo') && hasErrors('titulo')['required']">
+                Por favor, informe o titulo do filme
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('titulo') && hasErrors('titulo')['minlength']">
+                O titulo deve ter no minimo {{ hasErrors('titulo')['minlength'].requiredLength }} carácteres
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('titulo') && hasErrors('titulo')['maxlength']">
+                O titulo deve ter no máximo {{ hasErrors('anoLancamento')['maxlength'].requiredLength}} carácteres
+            </div>
+        </div>
+        <div class="col-sm-12 ">
+            <label for="categoria">Categoria</label>
+            <input type="text " class="form-control " id="categoria" placeholder="Categoria do filme " formControlName="categoria" [ngClass]="{ 'is-invalid': submitted && hasErrors('categoria') }" />
+            <div class="invalid-feedback" *ngIf="hasErrors('categoria') && hasErrors('categoria')['required']">
+                Por favor, informe a categoria do filme
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('categoria') && hasErrors('categoria')['minlength']">
+                A categoria deve ter no minimo {{ hasErrors('categoria')['minlength'].requiredLength }} carácteres
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('categoria') && hasErrors('categoria')['maxlength']">
+                A categoria deve ter no máximo {{ hasErrors('anoLancamento')['maxlength'].requiredLength}} carácteres
+            </div>
+        </div>
+        <div class="col-sm-12 ">
+            <label for="anoLancamento">Ano de Lançamento</label>
+            <input type="text" class="form-control " id="anoLancamento" placeholder="Ano de Lançamento do filme" formControlName="anoLancamento" [ngClass]="{ 'is-invalid': submitted && hasErrors('anoLancamento') }" />
+            <div class="invalid-feedback" *ngIf="hasErrors('anoLancamento') && hasErrors('anoLancamento')['required']">
+                Por favor, informe o ano de lançamento do filme
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('anoLancamento') && hasErrors('anoLancamento')['minlength']">
+                O ano de lançamento deve ter no mínimo {{ hasErrors('anoLancamento')['minlength'].requiredLength }} digitos
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('anoLancamento') && hasErrors('anoLancamento')['maxlength']">
+                O ano de lançamento deve ter no máximo {{ hasErrors('anoLancamento')['maxlength'].requiredLength }} digitos
+            </div>
+            <div class="invalid-feedback" *ngIf="hasErrors('anoLancamento') && hasErrors('anoLancamento')['pattern'] && !(hasErrors('anoLancamento')['maxlength']) && !(hasErrors('anoLancamento')['minlength'])">
+                Somente números!!!
+            </div>
+        </div>
+    </div>
+    <div class="margin ">
+        <button type="submit " class="btn btn-primary " (click)="onSubmit()">
+            Salvar
+        </button> {{''}}
+        <button type="button " class="btn btn-secondary " (click)="onCancel()">
+            Cancelar
+        </button> {{''}}
+        <button type="button " class="btn btn-danger " (click)="onBack()">
+            Voltar
+        </button>
+    </div>
+</form>

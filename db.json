@@ -1,0 +1,40 @@
+{
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "Vingadores Ultimato 3",
+      "categoria": "Ação",
+      "anoLancamento": "2019"
+    },
+    {
+      "id": 2,
+      "titulo": "Vingadores Guerra Infinita",
+      "categoria": "Ação",
+      "anoLancamento": "2018"
+    },
+    {
+      "titulo": "Toy Story",
+      "categoria": "Animação",
+      "anoLancamento": "1994",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "titulo": "Como treinar o seu Dragão 3",
+      "categoria": "Animação",
+      "anoLancamento": "2019"
+    },
+    {
+      "id": 7,
+      "titulo": "A Fantástica Fábrica de Chocolate",
+      "categoria": "Fantasia",
+      "anoLancamento": "2005"
+    },
+    {
+      "id": 8,
+      "titulo": "Shrek",
+      "categoria": "Animação",
+      "anoLancamento": "2001"
+    }
+  ]
+}
