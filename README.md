@@ -74,6 +74,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Typescript
 - Bootstrap
 
+### 📕 Biblioteca 
+
+Esse projeto se utilizou da seguinte lib:
+
+- json-server
+
 ### 📝 Licença
 
 Esse projeto está sob a licença MIT.
