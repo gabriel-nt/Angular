@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/Gabriel-Teixeira/Angular/blob/master/src/assets/angular.png" height="70"/>
+<p>
+  
 <h1 align="center">
     🚀 Angular
 </h1>
@@ -34,6 +38,9 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e/ou [Yarn](https://https://yarnpkg.com/) 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 * OBS: Você pode utilizar a cli (Interfaces de Linhas de Comando) do angular (angular-cli)
+
+### 🖥 Demonstração
+<img src="https://github.com/Gabriel-Teixeira/Angular/blob/master/src/assets/dashboard.PNG" />
 
 ### 🎲 Rodando o Front End (web)
 
